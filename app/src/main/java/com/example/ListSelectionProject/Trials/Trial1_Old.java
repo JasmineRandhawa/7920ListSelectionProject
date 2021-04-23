@@ -44,7 +44,7 @@ public class Trial1_Old extends AppCompatActivity {
     //trial specific variables
     final static int trialNumber = 1; // trial number
     final static int partNumber = 1; // part number
-    final static boolean isFirstTrialActivity = true; //is its first trial activity to launch
+    static boolean isFirstTrialActivity = true; //is its first trial activity to launch
     final static boolean isLastTrialActivity = false; // is it last trial activity
     final static String trialType = "SmallOld"; // trial type
     final static String listEra = "Small";
@@ -318,6 +318,7 @@ public class Trial1_Old extends AppCompatActivity {
     // initializes the variables to be computed later.
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void InitializeVariables() {
+        isFirstTrialActivity = true;
         timeTaken = 0;
         GenerateRandomlist();
         BindlistPicker();
