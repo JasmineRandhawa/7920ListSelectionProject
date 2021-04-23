@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ListSelectionProject">
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/project_icon"
+        android:label="List Selection"
+        android:roundIcon="@drawable/project_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NewDesign">
+        <activity android:name="com.example.ListSelectionProject.Main.InstructionsActivity"/>
+        <activity android:name="com.example.ListSelectionProject.Main.ExportDataActivity"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial1_New"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial2_New"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial3_New"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial1_Old"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial2_Old"/>
+        <activity android:name="com.example.ListSelectionProject.Trials.Trial3_Old"/>
+        <activity android:name="com.example.ListSelectionProject.Main.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
