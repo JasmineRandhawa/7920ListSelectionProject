@@ -300,15 +300,16 @@ public class Trial2_New extends AppCompatActivity {
     private void StartNextTrialAttempt(Boolean isFailure) {
         timeTaken = 0;
         noOfTaps = 0;
-        citiesListView.setNoOfTaps(0);
-        outerListAdaptor.setNoOfTaps(0);
         listOptionSelectedByUser = "";
         BindlistPicker();
+        citiesListView.setNoOfTaps(0);
+        outerListAdaptor.setNoOfTaps(0);
         if (!isFailure) {
             errorCount = 0;
             GenerateRandomlist();
         }
-
+        citiesListView.setIsFirstTime(true);
+        citiesListView.setStartTime(0);
     }
 
     // initializes the variables to be computed later.
@@ -326,6 +327,8 @@ public class Trial2_New extends AppCompatActivity {
         BindlistPicker();
         citiesListView.setNoOfTaps(0);
         outerListAdaptor.setNoOfTaps(0);
+        citiesListView.setIsFirstTime(true);
+        citiesListView.setStartTime(0);
     }
 
     //generate random lists

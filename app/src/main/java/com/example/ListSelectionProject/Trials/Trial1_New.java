@@ -43,7 +43,7 @@ public class Trial1_New extends AppCompatActivity {
     //trial specific variables
     final static int trialNumber = 1; // trial number
     final static int partNumber = 2; // part number
-    final static boolean isFirstTrialActivity = false; //is its first trial activity to launch
+    final static boolean isFirstTrialActivity = true; //is its first trial activity to launch
     final static boolean isLastTrialActivity = false; // is it last trial activity
     final static String trialType = "SmallNew"; // trial type
     final static String listEra = "Small";
@@ -300,15 +300,16 @@ public class Trial1_New extends AppCompatActivity {
     private void StartNextTrialAttempt(Boolean isFailure) {
         timeTaken = 0;
         noOfTaps = 0;
-        citiesListView.setNoOfTaps(0);
-        outerListAdaptor.setNoOfTaps(0);
         listOptionSelectedByUser = "";
         BindlistPicker();
+        citiesListView.setNoOfTaps(0);
+        outerListAdaptor.setNoOfTaps(0);
         if (!isFailure) {
             errorCount = 0;
             GenerateRandomlist();
         }
-
+        citiesListView.setIsFirstTime(true);
+        citiesListView.setStartTime(0);
     }
 
     // initializes the variables to be computed later.
@@ -326,6 +327,8 @@ public class Trial1_New extends AppCompatActivity {
         BindlistPicker();
         citiesListView.setNoOfTaps(0);
         outerListAdaptor.setNoOfTaps(0);
+        citiesListView.setIsFirstTime(true);
+        citiesListView.setStartTime(0);
     }
 
     //generate random lists
